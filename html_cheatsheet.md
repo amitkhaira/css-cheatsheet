@@ -481,3 +481,176 @@ comment
 <input type="reset">        <!-- Reset button -->
 <input type="button">       <!-- Generic button -->
 ```
+
+## Div & Span (Generic Containers)
+
+```html
+<!-- Block-level container -->
+<div class="container">
+    <p>Block content</p>
+</div>
+
+<!-- Inline container -->
+<p>This is <span class="highlight">highlighted text</span> in a paragraph.</p>
+```
+
+## Document Sections & Grouping
+
+```html
+<!-- Thematic break -->
+<hr>
+
+<!-- Address information -->
+<address>
+    Contact: <a href="mailto:email@example.com">email@example.com</a><br>
+    Phone: <a href="tel:+1234567890">123-456-7890</a>
+</address>
+
+<!-- Quotations -->
+<blockquote cite="https://source.com">
+    <p>Long quotation text here...</p>
+</blockquote>
+
+<q cite="https://source.com">Short inline quote</q>
+
+<!-- Citations -->
+<cite>Book Title</cite>
+<abbr title="HyperText Markup Language">HTML</abbr>
+<dfn>Definition term</dfn>
+```
+
+## Interactive Elements
+
+```html
+<!-- Summary/Details -->
+<details>
+    <summary>FAQ Question</summary>
+    <p>Answer to the question...</p>
+</details>
+
+<!-- Dialog/Modal -->
+<dialog id="modal">
+    <form method="dialog">
+        <p>Modal content</p>
+        <button value="cancel">Cancel</button>
+        <button value="confirm">Confirm</button>
+    </form>
+</dialog>
+
+<!-- Menu -->
+<menu>
+    <li><button type="button">Action 1</button></li>
+    <li><button type="button">Action 2</button></li>
+</menu>
+```
+
+## Embedded Content
+
+```html
+<!-- Canvas for graphics -->
+<canvas id="myCanvas" width="200" height="100">
+    Fallback content for browsers that don't support canvas
+</canvas>
+
+<!-- SVG graphics -->
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+
+<!-- Math equations -->
+<math>
+    <mi>x</mi>
+    <mo>=</mo>
+    <mi>y</mi>
+</math>
+
+<!-- Object embed -->
+<object data="document.pdf" type="application/pdf" width="500" height="300">
+    <p>Alternative content if PDF cannot be displayed</p>
+</object>
+
+<!-- Generic embed -->
+<embed src="content.swf" type="application/x-shockwave-flash" width="400" height="300">
+```
+
+## Ruby Annotations (for East Asian typography)
+
+```html
+<ruby>
+    漢 <rt>kan</rt>
+    字 <rt>ji</rt>
+</ruby>
+```
+
+## Data & Time Elements
+
+```html
+<!-- Time and dates -->
+<time datetime="2023-12-25">December 25, 2023</time>
+<time datetime="2023-12-25T09:00">9:00 AM on Christmas</time>
+<time datetime="P1D">1 day</time>
+
+<!-- Machine-readable data -->
+<data value="12345">Product Code: ABC-123</data>
+```
+
+## Common HTML Patterns
+
+### Card Layout
+```html
+<article class="card">
+    <header>
+        <h2>Card Title</h2>
+        <time datetime="2023-01-01">Jan 1, 2023</time>
+    </header>
+    <img src="image.jpg" alt="Card image">
+    <div class="card-content">
+        <p>Card description...</p>
+        <a href="/read-more" class="btn">Read More</a>
+    </div>
+</article>
+```
+
+### Hero Section
+```html
+<section class="hero">
+    <div class="hero-content">
+        <h1>Main Headline</h1>
+        <p>Subheading or description</p>
+        <a href="#cta" class="btn btn-primary">Call to Action</a>
+    </div>
+</section>
+```
+
+### Breadcrumb Navigation
+```html
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/category">Category</a></li>
+        <li aria-current="page">Current Page</li>
+    </ol>
+</nav>
+```
+
+## Validation & Standards
+
+### HTML5 Document Validation
+- Use [W3C Markup Validator](https://validator.w3.org/)
+- Ensure proper nesting of elements
+- Close all tags (except void elements)
+- Use lowercase for element and attribute names
+- Quote all attribute values
+
+### Common Mistakes to Avoid
+```html
+<!-- ❌ Wrong -->
+<p><div>Block inside inline</div></p>
+<img src="image.jpg">              <!-- Missing alt -->
+<a href="#">Link</a>               <!-- Empty href -->
+
+<!-- ✅ Correct -->
+<div><p>Proper nesting</p></div>
+<img src="image.jpg" alt="Description">
+<button type="button">Button text</button>
+```
