@@ -169,6 +169,12 @@ visibility: visible | hidden;  /* hidden but takes space */
 opacity: 0-1;            /* transparency */
 ```
 
+## Shadows
+```css
+box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+text-shadow: 1px 1px 2px #000;
+```
+
 ## Sizing
 
 ```css
@@ -285,6 +291,21 @@ visibility: hidden;       /* hidden but takes space */
 opacity: 0;              /* transparent but clickable */
 position: absolute;       /* remove from flow */
 left: -9999px;
+```
+## Cursor
+```css
+cursor: pointer | default | move | not-allowed;
+```
+
+---
+
+## Important Utilities
+```css
+object-fit: cover | contain;
+pointer-events: none;
+user-select: none;
+white-space: nowrap | pre-wrap;
+word-break: break-word;
 ```
 
 ## CSS Variables
